@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+         name="description"
+         content="Formulário com validação pelo javascript"
+      />
+      <meta name="author" content="JadsonRoxxar" />
+
+      <title>Formulário com validação</title>
+
+      <link rel="stylesheet" href="./src/reset.css" />
+      <link rel="stylesheet" href="./src/style.css" />
+   </head>
+   <body>
+      <main class="container">
+         <section class="info">
+            <h2>
+               Ficou com dúvida?<br />
+               Nos mande uma mensagem!
+            </h2>
+            <br />
+            <p>
+               caso tenha ficado com qualquer dúvida basta mandar uma mensagem e
+               <br />
+               entraremos em contato em menos de 24h.
+            </p>
+         </section>
+
+         <section class="form">
+            <form id="form" action="https://formsubmit.co/jadsonrocha.jrda@gmail.com" method="POST" data-form>
+               <input class="name inputs required"
+                  type="text"
+                  name="nome-completo"
+                  id="nome-completo" 
+                  placeholder="Nome completo*" oninput="nameValidate() "
+               />
+               <span class="span-required name-span">campo obrigatório</span>
+               <input class="email inputs required"
+                  type="text"
+                  name="email"
+                  id="email" 
+                  placeholder="Email*" oninput="emailvalidate()"
+               />
+               <span class="span-required email-span">campo obrigatório</span> 
+               <input class="number inputs required"
+                  type="tel"
+                  name="telefone"
+                  id="telefone"
+                  maxlength="15" onkeyup="handlePhone(event)"
+                  placeholder="Telefone*" oninput="phoneValidate()"
+               />
+               <span class="span-required number-span">campo obrigatório</span> 
+               <textarea class="message inputs required"
+                  name="texto"
+                  id="mensagem"
+                  style="resize: none;"
+                  placeholder="Mensagem*" oninput="messageValidate()"
+               ></textarea>
+               <span class="span-required message-span">campo obrigatório</span> 
+               <p class="span">*campos obrigatórios</p class="span">
+            
+               <button class="post" type="submit" data-button>Enviar</button>
+            </form>
+         </section>
+      </main>
+
+      <script defer src="./src/index.js"></script>
+   </body>
+</html>

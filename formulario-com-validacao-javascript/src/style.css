@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    background-color: #ccd1ce;
+    color: #ffffff;
+    transition: border-color 0.3s;
+}
+
+main {
+    width: 800px;
+    height: 402px;
+    background: url("./Group\ 9.svg") no-repeat;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus { 
+   outline: none;
+   border-color: 1px #a21df5;
+   box-shadow: 0 0 0 0.125rem #51c1bf;
+}
+
+button:disabled{ 
+   cursor: not-allowed;
+   background-color: #5f5d5d;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container .info {
+    width: 300px;
+    height: 111px;
+}
+
+.container .info > h2 {
+    width: 287.25px;
+    height: 46px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 23.44px;
+}
+
+.container .info > p {
+    width: 300px;
+    height: 54px;
+    font-size: 15px;
+    line-height: 17.58px;
+}
+
+.container .form {
+    display: block;
+    gap: 0px 16px;
+    width: 340px;
+    height: 378px;
+    position: relative;
+    border: 1px #000000;
+    background-color: #ffffff;
+}
+
+.container .form .name {
+    width: 298.01px;
+    height: 35.11px;
+    margin: 0.7rem 0 0 1.375rem;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.container .form .name-span {
+    margin: 2.8rem 0 0 1.375rem;
+    position: absolute;
+}
+
+.container .form .email {
+    width: 298.01px;
+    height: 35px;
+    margin: 3.7rem 0 0 1.375rem;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.container .form .email-span {
+    margin: 5.95rem 0 0 1.375rem;
+    position: absolute;
+}
+
+.container .form .number {
+    width: 298.01px;
+    height: 35px;
+    margin: 7.15rem 0 0 1.375rem;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.container .form .number-span {
+    margin: 9.3rem 0 0 1.375rem;
+    position: absolute;
+}
+
+.container .form .message {
+    width: 298.01px;
+    height: 100px;
+    margin: 10.575rem 0 0 1.375rem;
+    position: absolute;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.container .form .message-span {
+    margin: 16.9rem 0 0 1.375rem;
+    position: absolute;
+}
+
+.container .form .span {
+    font-weight: bold;
+    font-size: 15px;
+    margin: 18.3rem 0 0 1.375rem;
+    position: absolute;
+    line-height: 17.58px;
+    color: #000000;
+}
+.container .form .span-required {
+    display: none;
+    font-size: 8px;
+    line-height: 9.38px;
+}
+
+.container .form .post {
+    width: 298.01px;
+    height: 41.13px;
+    margin: 19.95rem 0 0 1.375rem;
+    position: absolute;
+    background-color: #3ccc87;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 17.58px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.success, 
+.error { 
+   text-align: center;
+}
+
+.success { 
+   color: greenyellow;
+}
+
+.error { 
+   color: tomato;
+}
