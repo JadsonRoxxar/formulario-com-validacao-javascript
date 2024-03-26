@@ -19,15 +19,15 @@ main {
 input:hover,
 input:focus,
 textarea:hover,
-textarea:focus { 
-   outline: none;
-   border-color: 1px #a21df5;
-   box-shadow: 0 0 0 0.125rem #51c1bf;
+textarea:focus {
+    outline: none;
+    border-color: 1px #eeeaf0;
+    box-shadow: 0 0 0 0.125rem #afc2c2;
 }
 
-button:disabled{ 
-   cursor: not-allowed;
-   background-color: #5f5d5d;
+button:disabled {
+    cursor: not-allowed;
+    background-color: #5f5d5d;
 }
 
 .container {
@@ -149,15 +149,15 @@ button:disabled{
     cursor: pointer;
 }
 
-.success, 
-.error { 
-   text-align: center;
+.success,
+.error {
+    text-align: center;
 }
 
-.success { 
-   color: greenyellow;
+.success {
+    color: greenyellow;
 }
 
-.error { 
-   color: tomato;
+.error {
+    color: tomato;
 }
