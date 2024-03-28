@@ -149,15 +149,17 @@ button:disabled {
     cursor: pointer;
 }
 
-.success,
-.error {
-    text-align: center;
-}
-
-.success {
-    color: greenyellow;
-}
-
-.error {
-    color: tomato;
-}
+/* .container .form .send {
+    width: 298.01px;
+    height: 41.13px;
+    margin: 19.95rem 0 0 1.375rem;
+    position: absolute;
+    background-color: #474754;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 17.58px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: none;
+} */

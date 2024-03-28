@@ -2,7 +2,6 @@ const form = document.getElementById("form");
 const fieldsForm = document.querySelectorAll(".required");
 const spans = document.querySelectorAll(".span-required");
 const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-
 const handlePhone = (event) => {
     let input = event.target;
     input.value = phoneMask(input.value);
@@ -26,6 +25,16 @@ function removeError(index) {
     fieldsForm[index].style.border = "2px solid #00c22b";
     spans[index].style.display = "none";
 }
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    while ((window.span.forEach.outerText = true)) {
+        alert("Preencha os campos obrigatórios!");
+    }
+
+    form.submit();
+});
 
 function nameValidate() {
     if (fieldsForm[0].value.length < 20) {
@@ -58,70 +67,3 @@ function messageValidate() {
         removeError(3);
     }
 }
-
-class FormSubmit {
-    constructor(settings) {
-        this.settings = settings;
-        this.form = document.querySelectorAll(settings.form);
-        this.formButton = document.querySelectorAll(settings.button);
-        if (this.form) {
-            this.url = this.form.getAttribute("action");
-        }
-        this.sendForm = this.sendForm.bind(this);
-    }
-}
-
-function displaySuccess() {
-    this.form.innerHtml = this.settings.success;
-}
-
-function displayError() {
-    this.form.innerHtml = this.settings.error;
-}
-
-function getFormObject() {
-    const formObject = {};
-    const fields = this.form.querySelectorAll("[name]");
-    fields.forEach((field) => {
-        formObject[field.getAttribute("name")] = field.value;
-    });
-    return formObject;
-}
-
-function onSubmission(event) {
-    event.preventDefault();
-    event.target.disabled = true;
-    event.target.innerText = "Enviando...";
-}
-
-async function sendForm(event) {
-    try {
-        this.onSubmission(event);
-        await fetch(this.url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-            },
-            body: JSON.stringify(this.getFormObject()),
-        });
-        this.displaySuccess();
-    } catch (error) {
-        this.displayError();
-        throw new Error(error);
-    }
-}
-
-function init() {
-    if (this.form) this.formButton.addEventListener("click", this.sendForm);
-    return this;
-}
-
-const formSubmit = new FormSubmit({
-    form: "[data-form]",
-    button: "[data-button]",
-    success: "<h1 class='success'>Formulário enviado!</h1>",
-    error: "<h1 class='error'>Náo foi possível enviar o formulário</h1>",
-});
-
-formSubmit.init();
